@@ -1,0 +1,73 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:summary="true" />
+
+        <ListPreference
+            app:defaultValue="reply"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Ui Setting">
+        <SwitchPreference
+            app:key="testSwitch"
+            app:summaryOff="switch off"
+            app:summaryOn="switch on"
+            app:title="Dark Mood"
+            />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Notification">
+        <EditTextPreference
+            app:key="testNotification"
+            android:summary="syt the Number of Days"
+            android:defaultValue="1"
+            app:title="Notification Time"
+            />
+        <ListPreference
+            android:defaultValue="20"
+            android:entries="@array/FontSize"
+            android:entryValues="@array/FontSize"
+            app:title="Font Size"
+            android:summary="Enter your Font Size"
+            app:defaultValue="20"
+            app:key="ListFontSize"
+            />
+
+
+
+    </PreferenceCategory>
+
+
+
+
+
+
+</PreferenceScreen>
